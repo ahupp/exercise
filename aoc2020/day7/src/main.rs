@@ -19,7 +19,6 @@ fn main() {
         for c in re_outer.captures(&i) {
             let head = de_s(&c[1]);
             let tail = &c[2];
-            println!("{} {}", head, tail);
             if tail.trim() == "no other bags" {
                 continue;
             }
@@ -37,8 +36,7 @@ fn main() {
         }
     }
 
-    //let mut result : HashSet<&str> = HashSet::new();
-    let kids = find_all("shiny gold bag", &tree);
+    let kids = find_all("shiny gold bag", &tree) - 1;
     println!("{}", kids);
 }
 
