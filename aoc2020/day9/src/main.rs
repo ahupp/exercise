@@ -50,8 +50,8 @@ fn main() {
         for j in (i+1)..diffset.len() {
             let s = diffset[j] - diffset[i];
             if s == invalid {
-                let min = &num[i..j].iter().min().unwrap();
-                let max = &num[i..j].iter().max().unwrap();
+                let min = num[i..j].iter().min().unwrap();
+                let max = num[i..j].iter().max().unwrap();
                 println!("{} {} {} {} {}", *min + *max, min, max, i, j);
 //                panic!("");
             }
